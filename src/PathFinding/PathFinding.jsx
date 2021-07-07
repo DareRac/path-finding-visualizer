@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../components/navbar/navbar";
 import Footer from "../components/footer";
+import Flash from "../components/flash";
 import Node from "./Node/Node";
 import { dijkstra, getNodesInShortestPathOrder } from "../algorithms/dijkstra";
 import { BFS, getNodesInPathOfBFS } from "../algorithms/breadthFirstSearch";
@@ -208,7 +209,7 @@ export default class PathFinding extends Component {
             Visualize DFS
           </button>
         </div>
-        <div
+        {/* <div
           className="alert alert-warning alert-dismissible fade show m-5"
           role="alert"
         >
@@ -223,7 +224,7 @@ export default class PathFinding extends Component {
               User can move Origin and Distination anywhere in the Grid
             </li>
             <li className="list-group-item">
-              User can make wall by Left-Clicking in the Grid
+              User can make walls by Left-Clicking in the Grid
             </li>
             <li className="list-group-item bg-light bg-gradient">
               And we are currently working on more functionalities and design of
@@ -236,7 +237,8 @@ export default class PathFinding extends Component {
             data-bs-dismiss="alert"
             aria-label="Close"
           ></button>
-        </div>
+        </div> */}
+        <Flash />
 
         <div className="grid">
           {grid.map((row, rowIdx) => {
